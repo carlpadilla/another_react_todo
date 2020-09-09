@@ -13,6 +13,17 @@ header {
   font-size: 2rem;
 }
 
+h1 {
+  color: #ffffff;
+  font-size: 2rem;
+
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
 header,
 form {
   min-height: 20vh;
@@ -20,16 +31,24 @@ form {
   justify-content: center;
   align-items: center;
 }
+
+input {
+  width: 400px;
+  box-shadow: 6px 3px 5px #444444;
+}
 form input,
 form button {
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
   background: white;
+  border-radius: 5px;
 }
 form button {
   color: #ff6f47;
   background: #f7fffe;
+  border-radius: 5px;
+  box-shadow: 6px 3px 5px #444444;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -106,6 +125,7 @@ select {
   box-shadow: none;
   border: 0 !important;
   background-image: none;
+  border-radius: 5px;
 }
 
 /* Custom Select */
@@ -113,12 +133,14 @@ select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 6px 3px 5px #444444;
 }
 select {
   color: #ff6f47;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   width: 12rem;
+  width: 170px;
 }
 /* Arrow */
 .select::after {
@@ -133,6 +155,25 @@ select {
 }
 /* Transition */
 
-.select:hover::after {
-  transform: scale(1.5);
+/* .select:hover::after {
+  transform: scale(1.2);
+} */
+
+@media screen and (max-width: 850px) {
+  header,
+  form {
+    min-height: 20vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-button {
+    margin-top: 5px;
+    width: 110px;
+    box-shadow: 6px 3px 5px #444444;
+  }
+  .todo-button :hover {
+    color: whitesmoke;
+  }
 }

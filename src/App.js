@@ -52,7 +52,7 @@ function App() {
   return (
     <div className='App'>
       <header>
-        <h1>Another To-Do App</h1>
+        <h1 className='title'>Another To-Do App</h1>
       </header>
       <Form
         setInputText={setInputText}
