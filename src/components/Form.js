@@ -1,5 +1,5 @@
 import React from 'react';
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = ({ setInputText, todos, setTodos, inputText }) => {
   const inputTextHandler = (e) => {
@@ -8,7 +8,7 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setTodos([...todos, { text: inputText, completed: false, id: uuid() }]);
+    setTodos([...todos, { text: inputText, completed: false, id: uuidv4() }]);
     setInputText('');
   };
 
